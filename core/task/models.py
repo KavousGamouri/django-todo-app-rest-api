@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Task(models.Model):
-    author = models.ForeignKey('accounts.Profile', on_delete=models.CASCADE)
+    author = models.ForeignKey('accounts.User', on_delete=models.CASCADE)
     task = models.CharField(max_length=255)
     completed = models.BooleanField(default=False)
     description = models.TextField(null=True, blank=True)
